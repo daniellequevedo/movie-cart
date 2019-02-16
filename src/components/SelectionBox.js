@@ -1,12 +1,17 @@
 import React from 'react';
+import products from '../data/products';
 
 const SelectionBox = ({changeSelectedProductHandler}, selectedProduct) => {
   return (
     <div id="selectionBox">
       <ul className="products">
-        {/* <!-- Populate this from JS --> */}
-        <li onClick={() => changeSelectedProductHandler('Movie 1')}>Movie1</li>
-        <li onClick={() => changeSelectedProductHandler('Movie 2')}>Movie2</li>
+        {products.map((item) => {
+          return (
+            <li key={item} onClick={() => changeSelectedProductHandler(item)}>
+              {item}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
