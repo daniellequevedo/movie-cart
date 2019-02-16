@@ -3,7 +3,7 @@ import React from 'react';
 const DisplayBox = ({ selectedProduct }) => {
   return (
     <div id="displayBox">
-      <p>{selectedProduct}</p>
+      <p>{selectedProduct.name}</p>
       {/* <img class="displayImg" src="${selectedProduct.image}" />
       <div class="displayDetails">
         <h4>${selectedProduct.name}&nbsp;<span>(${selectedProduct.year})</span></h4>

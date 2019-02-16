@@ -7,8 +7,8 @@ const SelectionBox = ({changeSelectedProductHandler}, selectedProduct) => {
       <ul className="products">
         {products.map((item) => {
           return (
-            <li key={item} onClick={() => changeSelectedProductHandler(item)}>
-              {item}
+            <li key={item.id} onClick={() => changeSelectedProductHandler(item)}>
+              {item.name}
             </li>
           );
         })}
