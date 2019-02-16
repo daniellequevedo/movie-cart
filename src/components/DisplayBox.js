@@ -3,26 +3,25 @@ import React from 'react';
 const DisplayBox = ({ selectedProduct }) => {
   return (
     <div id="displayBox">
-      <p>{selectedProduct.name}</p>
-      {/* <img class="displayImg" src="${selectedProduct.image}" />
-      <div class="displayDetails">
-        <h4>${selectedProduct.name}&nbsp;<span>(${selectedProduct.year})</span></h4>
-        <div class="scrollBox">
-          <p>${selectedProduct.description}</p>
+      <img className="displayImg" src={selectedProduct.image} />
+      <div className="displayDetails">
+        <h4>{selectedProduct.name}&nbsp;<span>({selectedProduct.year})</span></h4>
+        <div className="scrollBox">
+          <p>{selectedProduct.description}</p>
         </div>
-        <div class="footer">
-          <p>Rating: ${selectedProduct.rating} / 10 stars</p>
+        <div className="footer">
+          <p>Rating: {selectedProduct.rating} / 10 stars</p>
         </div>
-        <div class="footer">
-          <p>Price: $${selectedProduct.price.toFixed(2)}</p>
+        <div className="footer">
+          <p>Price: ${selectedProduct.price.toFixed(2)}</p>
         </div>
-        <div class="footer">
-          <p>Runtime: ${selectedProduct.runtime} minutes</p>
+        <div className="footer">
+          <p>Runtime: {selectedProduct.runtime} minutes</p>
         </div>
-        <div class="footer">
-          <button class="add-to-cart" data-id="${selectedProduct.id}">Add To Cart</button>
+        <div className="footer">
+          <button className="add-to-cart" data-id={selectedProduct.id}>Add To Cart</button>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

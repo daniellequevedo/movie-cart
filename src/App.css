@@ -1,33 +1,231 @@
-/* .App {
+/* ================================= 
+  Element Styles
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #4c4c4c;
+  font-size: 1.3em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 2em 0 1em;
+}
+ul li {
+  padding: 1em;
+}
+.hidden {
+  display: none;
+}
+.wrapper {
+  float: left;
+  width: 60%;
+}
+
+
+/* ---------- */
+/* displayBox */
+/* ---------- */
+
+#displayBox, #selectionBox {
+  float: left;
+  width: 100%;
+}
+
+#displayBox {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 10px;
+  background-color: #fff;
+
+}
+
+#displayBox h4 {
+    margin: 0 0 4px 0;
+}
+#displayBox h4 span {
+  font-weight: normal;
+}
+#displayBox p {
+  margin: 0;
+  font-weight: 300;
+}
+
+
+.displayImg {
+  max-width: 100%;
+  max-height: 100%;
+  float: left;
+  margin-right: 20px;
+}
+#displayBox img {
+  width: 20%;
+  max-width: 200px;
+  min-width: 150px;
+  float: left;
+}
+.displayDetails {
+  clear: none;
+  float: none;
+  overflow: hidden;
+  display: block;
+  margin: auto;
+  height: 100%;
+}
+
+.scrollBox {
+    overflow: auto;
+    display: block;
+    margin: auto;
+    height: calc(100% - 100px);
+}
+.footer {
+  height: auto;
+  margin: 0;
+  padding: 3px 0 0;
+  font-size: .8em;
+}
+.displayDetails .footer {
+  border-top: 2px solid #bcc0dc;
+}
+.displayDetails > .footer ~ .footer {border: none;}
+.footer p {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+
+
+
+
+
+
+
+
+/* ------------ */
+/* selectionBox */
+/* ------------ */
+#selectionBox {
+  height: 148px;
+  background-color: rgb(237, 236, 236);
+  border-top: 2px solid #bcc0dc;
+  margin: 0;
+  padding: 0;
+  padding: 10px 10px 0 10px;
+  overflow-x: scroll;
+}
+#selectionBox div:hover {
+  cursor: pointer;
+}
+
+.products {
+  float:left;
+  width: 100%;
+  font-size: .8em;
+  margin: 0;
+}
+.products li {
+  float: left;
+  clear: left;
+  margin: 0;
+  padding: 0;
+  padding-bottom: .7em;
+}
+
+.products img {
+  width: 40px;
+  float: left;
+}
+.products span {
+  margin-left: .5em;
+}
+
+
+
+
+
+#cart {
+  font-size: .8em;
+  border: 1px solid gray;
+  border-radius: .2em;
+  padding: 0;
+  margin: 0;
+  
+  float:right;
+  width: 40%;
+}
+#items {
+  display: box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.cartItem {
+  float: left;
+  margin: 0;
+  padding: .7em;
+  width: 100%;
+  background: #fcfcfc;
+  font-size: .7em;
+}
+.cartItem:hover {
+  background-color: white;
+}
+#cart .cartItemImg {
+  width: 20px;
+  float: left;
+  margin-right: .5em;
+}
+#cart .cartItemName {
+  width: calc(70% - 95px);
+  float: left;
+  margin-right: .5em;
+  overflow-wrap: break-word;
+}
+#cart .price {
+  width: calc(10%);
+  float: left;
+  margin-right: .5em;
+}
+#cart .qty, #cart .qtyInput {
+  width: 10%;
+  float: left;
+  max-width: 40px;
+  margin-right: .5em;
+}
+#cart button {
+  float: left;
+  background-color: #E37C6A;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: .9em;
+}
+#cart button:first-of-type {
+  margin-right: .5em;
+  background-color: #7BD3DF;
+}
+#total {
+  background-color: #4c4c4c;
+  color: white;
+  padding: .7em;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* PHONE */
+@media screen and (max-width: 670px) {
+  .displayDetails {
+    clear: both;
+    float: left;
+    margin: 15px 0;
   }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+}
