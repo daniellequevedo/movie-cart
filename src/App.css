@@ -5,7 +5,15 @@
 * {
   box-sizing: border-box;
 }
-
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
 body {
   font-family: 'Lato', sans-serif;
   color: #4c4c4c;
@@ -84,7 +92,8 @@ ul li {
     overflow: auto;
     display: block;
     margin: auto;
-    height: calc(100% - 100px);
+    height: 80px;
+    overflow-y: scroll;
 }
 .footer {
   height: auto;
@@ -119,8 +128,7 @@ ul li {
   border-top: 2px solid #bcc0dc;
   margin: 0;
   padding: 0;
-  padding: 10px 10px 0 10px;
-  overflow-x: scroll;
+  padding: 10px;
 }
 #selectionBox div:hover {
   cursor: pointer;
@@ -131,6 +139,8 @@ ul li {
   width: 100%;
   font-size: .8em;
   margin: 0;
+  height: 100%;
+  overflow-y: scroll;
 }
 .products li {
   float: left;

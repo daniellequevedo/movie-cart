@@ -5,10 +5,13 @@ const SelectionBox = ({changeSelectedProductHandler}, selectedProduct) => {
   return (
     <div id="selectionBox">
       <ul className="products">
-        {products.map((item) => {
+        {products.map((product) => {
           return (
-            <li key={item.id} onClick={() => changeSelectedProductHandler(item)}>
-              {item.name}
+            <li key={product.id} onClick={() => changeSelectedProductHandler(product)}>
+              <img src={product.image}/>
+              <span>{product.name}</span>
+              <br/>
+              <span>${product.price.toFixed(2)}</span>
             </li>
           );
         })}
